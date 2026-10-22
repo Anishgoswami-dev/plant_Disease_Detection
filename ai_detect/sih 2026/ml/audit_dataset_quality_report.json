@@ -1,0 +1,183 @@
+{
+  "timestamp": "2026-09-18 13:12:20",
+  "dataset_integrity": {
+    "dataset_dir_exists": true,
+    "total_class_folders": 38,
+    "missing_class_folders": [],
+    "extra_class_folders": [],
+    "total_images": 2655,
+    "class_counts": {
+      "Apple___Apple_scab": 221,
+      "Apple___Black_rot": 199,
+      "Apple___Cedar_apple_rust": 99,
+      "Apple___healthy": 554,
+      "Blueberry___healthy": 468,
+      "Cherry_(including_sour)___Powdery_mildew": 409,
+      "Cherry_(including_sour)___healthy": 334,
+      "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": 187,
+      "Corn_(maize)___Common_rust_": 184,
+      "Corn_(maize)___Northern_Leaf_Blight": 0,
+      "Corn_(maize)___healthy": 0,
+      "Grape___Black_rot": 0,
+      "Grape___Esca_(Black_Measles)": 0,
+      "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": 0,
+      "Grape___healthy": 0,
+      "Orange___Haunglongbing_(Citrus_greening)": 0,
+      "Peach___Bacterial_spot": 0,
+      "Peach___healthy": 0,
+      "Pepper,_bell___Bacterial_spot": 0,
+      "Pepper,_bell___healthy": 0,
+      "Potato___Early_blight": 0,
+      "Potato___Late_blight": 0,
+      "Potato___healthy": 0,
+      "Raspberry___healthy": 0,
+      "Soybean___healthy": 0,
+      "Squash___Powdery_mildew": 0,
+      "Strawberry___Leaf_scorch": 0,
+      "Strawberry___healthy": 0,
+      "Tomato___Bacterial_spot": 0,
+      "Tomato___Early_blight": 0,
+      "Tomato___Late_blight": 0,
+      "Tomato___Leaf_Mold": 0,
+      "Tomato___Septoria_leaf_spot": 0,
+      "Tomato___Spider_mites Two-spotted_spider_mite": 0,
+      "Tomato___Target_Spot": 0,
+      "Tomato___Tomato_Yellow_Leaf_Curl_Virus": 0,
+      "Tomato___Tomato_mosaic_virus": 0,
+      "Tomato___healthy": 0
+    },
+    "file_extensions": {
+      ".jpg": 2655
+    },
+    "corrupted_count": 0,
+    "corrupted_files": [],
+    "internal_exact_duplicate_groups": 0,
+    "internal_duplicate_samples": []
+  },
+  "leakage_check": {
+    "exact_hash_leakage_count": 6,
+    "exact_hash_leakages": [
+      {
+        "hash": "cd94a2d84d1dcc0659000bf466faaad2",
+        "heldout_file": "d:\\ai_detect\\sih 2026\\ml\\test_data\\heldout_test\\Apple___Apple_scab\\ff99efdc-a9f8-4360-9c64-f8274f456be5___FREC_Scab 3161.JPG",
+        "dataset_files": [
+          "d:\\ai_detect\\sih 2026\\ml\\datasets\\plantvillage\\Apple___Apple_scab\\be464cd4-33f0-4531-ba8f-2167f89b6c60.JPG"
+        ]
+      },
+      {
+        "hash": "20c834cda8fa55cec1b9f6065831b2e6",
+        "heldout_file": "d:\\ai_detect\\sih 2026\\ml\\test_data\\heldout_test\\Apple___Black_rot\\ff0f9b3a-4ef4-4c38-9a23-516beff99192___JR_FrgE.S 3048.JPG",
+        "dataset_files": [
+          "d:\\ai_detect\\sih 2026\\ml\\datasets\\plantvillage\\Apple___Black_rot\\911ebda6-0375-449d-bff3-5eef205964dc.JPG"
+        ]
+      },
+      {
+        "hash": "39ee9db245123f9b6cd4aa7af14e4e70",
+        "heldout_file": "d:\\ai_detect\\sih 2026\\ml\\test_data\\heldout_test\\Apple___Black_rot\\ff4e792b-14c5-41db-af9e-0676abf8d20a___JR_FrgE.S 3088.JPG",
+        "dataset_files": [
+          "d:\\ai_detect\\sih 2026\\ml\\datasets\\plantvillage\\Apple___Black_rot\\d6a6201e-705f-4ef1-8851-b77fe718c048.JPG"
+        ]
+      },
+      {
+        "hash": "3aa7621bc49274803c766ffc42e6ee0c",
+        "heldout_file": "d:\\ai_detect\\sih 2026\\ml\\test_data\\heldout_test\\Cherry_(including_sour)___Powdery_mildew\\fff3ae4b-4bce-4b7a-b53c-98c482d9d8fd___FREC_Pwd.M 0414.JPG",
+        "dataset_files": [
+          "d:\\ai_detect\\sih 2026\\ml\\datasets\\plantvillage\\Cherry_(including_sour)___Powdery_mildew\\39ed6c8a-bc85-48fa-945e-9dda287d53a1.JPG"
+        ]
+      },
+      {
+        "hash": "1c9619636530fb360131b838b98bab81",
+        "heldout_file": "d:\\ai_detect\\sih 2026\\ml\\test_data\\heldout_test\\Cherry_(including_sour)___healthy\\feee45d9-e66f-499f-8ca9-e76881aa10ab___JR_HL 9756.JPG",
+        "dataset_files": [
+          "d:\\ai_detect\\sih 2026\\ml\\datasets\\plantvillage\\Cherry_(including_sour)___healthy\\42ed8da6-cca5-4a4a-9128-2658b3df8631.JPG"
+        ]
+      },
+      {
+        "hash": "fbdbebc3db6ab368b353e9bdeda79e67",
+        "heldout_file": "d:\\ai_detect\\sih 2026\\ml\\test_data\\heldout_test\\Cherry_(including_sour)___healthy\\ffba4782-60e5-4757-9b77-32b08b670e0f___JR_HL 9601.JPG",
+        "dataset_files": [
+          "d:\\ai_detect\\sih 2026\\ml\\datasets\\plantvillage\\Cherry_(including_sour)___healthy\\6048cbc2-4fd0-4996-8d85-d0480f512645.JPG"
+        ]
+      }
+    ],
+    "filename_leakage_count": 0,
+    "filename_leakages": []
+  },
+  "split_verification": {
+    "heldout_total_images": 153,
+    "heldout_class_counts": {
+      "Apple___Apple_scab": 3,
+      "Apple___Black_rot": 3,
+      "Apple___Cedar_apple_rust": 3,
+      "Apple___healthy": 3,
+      "Blueberry___healthy": 3,
+      "Cherry_(including_sour)___Powdery_mildew": 3,
+      "Cherry_(including_sour)___healthy": 3,
+      "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": 3,
+      "Corn_(maize)___Common_rust_": 3,
+      "Corn_(maize)___Northern_Leaf_Blight": 3,
+      "Corn_(maize)___healthy": 3,
+      "Grape___Black_rot": 3,
+      "Grape___Esca_(Black_Measles)": 3,
+      "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": 3,
+      "Grape___healthy": 3,
+      "Orange___Haunglongbing_(Citrus_greening)": 3,
+      "Peach___Bacterial_spot": 3,
+      "Peach___healthy": 3,
+      "Pepper,_bell___Bacterial_spot": 3,
+      "Pepper,_bell___healthy": 3,
+      "Potato___Early_blight": 3,
+      "Potato___Late_blight": 3,
+      "Potato___healthy": 3,
+      "Raspberry___healthy": 3,
+      "Soybean___healthy": 3,
+      "Squash___Powdery_mildew": 6,
+      "Strawberry___Leaf_scorch": 6,
+      "Strawberry___healthy": 6,
+      "Tomato___Bacterial_spot": 6,
+      "Tomato___Early_blight": 6,
+      "Tomato___Late_blight": 6,
+      "Tomato___Leaf_Mold": 6,
+      "Tomato___Septoria_leaf_spot": 6,
+      "Tomato___Spider_mites Two-spotted_spider_mite": 6,
+      "Tomato___Target_Spot": 6,
+      "Tomato___Tomato_Yellow_Leaf_Curl_Virus": 6,
+      "Tomato___Tomato_mosaic_virus": 6,
+      "Tomato___healthy": 6
+    },
+    "heldout_corrupted_count": 0,
+    "svm_split_available": {
+      "svm_train_blobs": 8789,
+      "svm_test_blobs": 10585
+    }
+  },
+  "evaluation_reproducibility": {
+    "reproduced": true,
+    "evaluated_samples": 153,
+    "top1_accuracy": 48.37,
+    "macro_f1": 44.47,
+    "balanced_accuracy": 51.32,
+    "top3_accuracy": 76.47,
+    "confidence_interval_95pct": {
+      "lower": 40.58,
+      "upper": 56.23,
+      "margin_of_error": 7.82
+    }
+  },
+  "model_verification": {
+    "total_classes_in_indices": 38,
+    "model_file_size_bytes": 9328715,
+    "model_file_modified_time": "Fri Sep 18 00:58:56 2026",
+    "model_sha256": "ab9b19f753d2cb8588fdacbe0e75b82222eda2ac468f0f6c7cec8b8d31c7b9f7",
+    "classifier_weight_shape": [
+      38,
+      1280
+    ],
+    "is_mobilenet_v2": true
+  },
+  "recommendation": "NOT READY",
+  "serious_issues": [
+    "Dataset download incomplete: only 2655 of 19,298 images downloaded.",
+    "CRITICAL DATA LEAKAGE: 6 exact identical images / 0 filename overlaps exist between heldout_test and plantvillage."
+  ]
+}

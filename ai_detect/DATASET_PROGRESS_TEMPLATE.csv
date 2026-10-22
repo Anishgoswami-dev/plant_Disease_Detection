@@ -1,0 +1,31 @@
+image_id,crop,disease,bbox_annotated,mask_annotated,reviewer,quality_status,notes
+0027889d-8d3b-46c2-b081-c41925811602.JPG,Tomato,Early Blight,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+00383159-b435-48d6-b390-5d1e4b746290.JPG,Tomato,Early Blight,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+003a20fa-3b2f-4fc1-af1c-387591c4b0a4.JPG,Tomato,Early Blight,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+01248a8b-bbc8-439b-b1d8-542634a9be20.JPG,Tomato,Early Blight,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+019af757-f114-459e-8709-dab6d1eaee0e.JPG,Tomato,Early Blight,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+02993807-23be-4976-b38f-867c692251ad.JPG,Tomato,Early Blight,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+017ca528-945d-40d5-af2a-45a04e65814a.JPG,Tomato,Late Blight,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+0299ba28-eea7-48a1-83fc-34e9d746c991.JPG,Tomato,Late Blight,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+032d057b-c3f9-4f93-8a86-26dae36725ed.JPG,Tomato,Late Blight,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+04e988bb-ada4-4ba5-b8cc-361fb95ff22e.JPG,Tomato,Late Blight,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+04f280c2-0b57-48ea-b5dc-15b78f123072.JPG,Tomato,Late Blight,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+0595377c-3b8e-4356-bc29-8fecf9612c28.JPG,Tomato,Late Blight,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+005dc47d-b646-4ba7-a583-d200b8e782ad.JPG,Tomato,Bacterial Spot,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+009d3563-de0f-4286-8bde-e31bdd6b1338.JPG,Tomato,Bacterial Spot,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+00c61e09-b7d2-432e-8f7c-eb406f5f5f46.JPG,Tomato,Bacterial Spot,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+015cfd44-d04b-490b-9c5a-97f39ac6d748.JPG,Tomato,Bacterial Spot,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+02342954-e0a8-4b6f-87e3-660e0aec21ca.JPG,Tomato,Bacterial Spot,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+044a85aa-4ae3-4c77-a94a-26b93cdf7885.JPG,Tomato,Bacterial Spot,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+00000bfc-85e8-46a3-ac59-e70d7a734f3d.JPG,Tomato,Septoria Leaf Spot,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+01734ad4-2c7c-4b6f-b828-70aee0b2a4a1.JPG,Tomato,Septoria Leaf Spot,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+02185cf8-fd03-4ab1-bf81-6507b4429606.JPG,Tomato,Septoria Leaf Spot,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+02398003-eaf1-43a9-a6c2-1070742388f2.JPG,Tomato,Septoria Leaf Spot,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+025ab5ae-7bfe-4f9e-9790-9d8b89653bca.JPG,Tomato,Septoria Leaf Spot,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+02d00996-a7af-477f-a121-4eea45089d68.JPG,Tomato,Septoria Leaf Spot,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+003ee675-0423-4258-a265-5db6cd13c8bf.JPG,Tomato,Healthy,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+016e9f1f-287d-4ba5-addc-1c4ae510e36e.JPG,Tomato,Healthy,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+05ba7349-c8e9-4113-bce9-45ea60107b66.JPG,Tomato,Healthy,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+06a65c89-5210-4872-a16e-c5be1d18b7cb.JPG,Tomato,Healthy,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+08f21d30-73e5-4eb2-8355-e4b632f795b2.JPG,Tomato,Healthy,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists
+095b8410-8646-4366-aa0c-1bf98901d406.JPG,Tomato,Healthy,NO,NO,Unassigned,PENDING_ANNOTATION,No real bbox or mask annotation file exists

@@ -1,0 +1,556 @@
+{
+  "model": "EfficientNet-B0 Candidate",
+  "checkpoint": "D:\\ai_detect\\sih 2026\\ml\\models\\plant_disease_candidate_efficientnet.pth",
+  "test_samples": 10547,
+  "overall_accuracy": 93.14,
+  "confidence_distribution": {
+    "0-10%": {
+      "count": 0,
+      "pct_of_total": 0.0,
+      "accuracy_in_bin": 0.0
+    },
+    "10-20%": {
+      "count": 72,
+      "pct_of_total": 0.68,
+      "accuracy_in_bin": 36.11
+    },
+    "20-30%": {
+      "count": 325,
+      "pct_of_total": 3.08,
+      "accuracy_in_bin": 52.92
+    },
+    "30-40%": {
+      "count": 469,
+      "pct_of_total": 4.45,
+      "accuracy_in_bin": 67.38
+    },
+    "40-50%": {
+      "count": 623,
+      "pct_of_total": 5.91,
+      "accuracy_in_bin": 75.76
+    },
+    "50-60%": {
+      "count": 835,
+      "pct_of_total": 7.92,
+      "accuracy_in_bin": 88.26
+    },
+    "60-70%": {
+      "count": 1070,
+      "pct_of_total": 10.15,
+      "accuracy_in_bin": 94.67
+    },
+    "70-80%": {
+      "count": 1497,
+      "pct_of_total": 14.19,
+      "accuracy_in_bin": 97.86
+    },
+    "80-90%": {
+      "count": 2283,
+      "pct_of_total": 21.65,
+      "accuracy_in_bin": 98.82
+    },
+    "90-95%": {
+      "count": 1551,
+      "pct_of_total": 14.71,
+      "accuracy_in_bin": 99.68
+    },
+    "95-100%": {
+      "count": 1822,
+      "pct_of_total": 17.28,
+      "accuracy_in_bin": 99.95
+    }
+  },
+  "threshold_analysis": {
+    "0.3": {
+      "predictions_above": 10150,
+      "predictions_below": 397,
+      "accuracy_above": 94.84,
+      "accuracy_below": 49.87,
+      "coverage_pct": 96.24
+    },
+    "0.4": {
+      "predictions_above": 9681,
+      "predictions_below": 866,
+      "accuracy_above": 96.17,
+      "accuracy_below": 59.35,
+      "coverage_pct": 91.79
+    },
+    "0.5": {
+      "predictions_above": 9058,
+      "predictions_below": 1489,
+      "accuracy_above": 97.57,
+      "accuracy_below": 66.22,
+      "coverage_pct": 85.88
+    },
+    "0.6": {
+      "predictions_above": 8223,
+      "predictions_below": 2324,
+      "accuracy_above": 98.52,
+      "accuracy_below": 74.14,
+      "coverage_pct": 77.97
+    },
+    "0.7": {
+      "predictions_above": 7153,
+      "predictions_below": 3394,
+      "accuracy_above": 99.09,
+      "accuracy_below": 80.61,
+      "coverage_pct": 67.82
+    },
+    "0.8": {
+      "predictions_above": 5656,
+      "predictions_below": 4891,
+      "accuracy_above": 99.42,
+      "accuracy_below": 85.89,
+      "coverage_pct": 53.63
+    },
+    "0.9": {
+      "predictions_above": 3373,
+      "predictions_below": 7174,
+      "accuracy_above": 99.82,
+      "accuracy_below": 90.01,
+      "coverage_pct": 31.98
+    },
+    "0.95": {
+      "predictions_above": 1822,
+      "predictions_below": 8725,
+      "accuracy_above": 99.95,
+      "accuracy_below": 91.72,
+      "coverage_pct": 17.28
+    }
+  },
+  "top1_vs_top3": {
+    "top1_correct": 9824,
+    "top1_wrong_but_top3_correct": 607,
+    "both_wrong": 116,
+    "top3_rescue_rate": 83.96,
+    "avg_confidence_when_top1_correct": 78.18,
+    "avg_confidence_when_top1_wrong": 42.84,
+    "avg_margin_when_correct": 71.2,
+    "avg_margin_when_wrong": 21.51
+  },
+  "entropy_stats": {
+    "mean": 1.0164,
+    "median": 0.8967,
+    "p95": 2.3227,
+    "max": 3.1792,
+    "mean_when_correct": 0.9538,
+    "mean_when_wrong": 1.8664
+  },
+  "calibration": [
+    {
+      "bin_lo": 0.0,
+      "bin_hi": 0.1,
+      "count": 0,
+      "avg_confidence": 0.05,
+      "avg_accuracy": 0.0
+    },
+    {
+      "bin_lo": 0.1,
+      "bin_hi": 0.2,
+      "count": 72,
+      "avg_confidence": 0.1757,
+      "avg_accuracy": 0.3611
+    },
+    {
+      "bin_lo": 0.2,
+      "bin_hi": 0.3,
+      "count": 325,
+      "avg_confidence": 0.2552,
+      "avg_accuracy": 0.5292
+    },
+    {
+      "bin_lo": 0.3,
+      "bin_hi": 0.4,
+      "count": 469,
+      "avg_confidence": 0.3555,
+      "avg_accuracy": 0.6738
+    },
+    {
+      "bin_lo": 0.4,
+      "bin_hi": 0.5,
+      "count": 623,
+      "avg_confidence": 0.4526,
+      "avg_accuracy": 0.7576
+    },
+    {
+      "bin_lo": 0.5,
+      "bin_hi": 0.6,
+      "count": 835,
+      "avg_confidence": 0.5513,
+      "avg_accuracy": 0.8826
+    },
+    {
+      "bin_lo": 0.6,
+      "bin_hi": 0.7,
+      "count": 1070,
+      "avg_confidence": 0.652,
+      "avg_accuracy": 0.9467
+    },
+    {
+      "bin_lo": 0.7,
+      "bin_hi": 0.8,
+      "count": 1497,
+      "avg_confidence": 0.7524,
+      "avg_accuracy": 0.9786
+    },
+    {
+      "bin_lo": 0.8,
+      "bin_hi": 0.9,
+      "count": 2283,
+      "avg_confidence": 0.8531,
+      "avg_accuracy": 0.9882
+    },
+    {
+      "bin_lo": 0.9,
+      "bin_hi": 1.0,
+      "count": 3373,
+      "avg_confidence": 0.9527,
+      "avg_accuracy": 0.9982
+    }
+  ],
+  "expected_calibration_error_pct": 17.39,
+  "per_class_confidence": {
+    "Apple___Apple_scab": {
+      "mean_confidence": 84.03,
+      "median_confidence": 91.23,
+      "min_confidence": 27.86,
+      "accuracy": 93.64,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 2,
+      "sample_count": 110
+    },
+    "Apple___Black_rot": {
+      "mean_confidence": 92.29,
+      "median_confidence": 97.8,
+      "min_confidence": 42.94,
+      "accuracy": 100.0,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 2,
+      "sample_count": 85
+    },
+    "Apple___Cedar_apple_rust": {
+      "mean_confidence": 95.97,
+      "median_confidence": 98.36,
+      "min_confidence": 57.0,
+      "accuracy": 100.0,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 0,
+      "sample_count": 60
+    },
+    "Apple___healthy": {
+      "mean_confidence": 75.3,
+      "median_confidence": 80.45,
+      "min_confidence": 22.07,
+      "accuracy": 93.61,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 19,
+      "sample_count": 266
+    },
+    "Blueberry___healthy": {
+      "mean_confidence": 87.15,
+      "median_confidence": 90.56,
+      "min_confidence": 44.54,
+      "accuracy": 100.0,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 2,
+      "sample_count": 229
+    },
+    "Cherry_(including_sour)___Powdery_mildew": {
+      "mean_confidence": 79.47,
+      "median_confidence": 91.68,
+      "min_confidence": 14.92,
+      "accuracy": 96.93,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 33,
+      "sample_count": 228
+    },
+    "Cherry_(including_sour)___healthy": {
+      "mean_confidence": 92.38,
+      "median_confidence": 94.92,
+      "min_confidence": 62.84,
+      "accuracy": 100.0,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 0,
+      "sample_count": 202
+    },
+    "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+      "mean_confidence": 82.15,
+      "median_confidence": 87.96,
+      "min_confidence": 35.1,
+      "accuracy": 91.35,
+      "overconfident_wrong": 1,
+      "low_conf_correct": 4,
+      "sample_count": 104
+    },
+    "Corn_(maize)___Common_rust_": {
+      "mean_confidence": 90.4,
+      "median_confidence": 95.51,
+      "min_confidence": 27.78,
+      "accuracy": 97.42,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 2,
+      "sample_count": 233
+    },
+    "Corn_(maize)___Northern_Leaf_Blight": {
+      "mean_confidence": 79.77,
+      "median_confidence": 86.02,
+      "min_confidence": 15.83,
+      "accuracy": 81.08,
+      "overconfident_wrong": 3,
+      "low_conf_correct": 10,
+      "sample_count": 222
+    },
+    "Corn_(maize)___healthy": {
+      "mean_confidence": 90.77,
+      "median_confidence": 94.1,
+      "min_confidence": 21.39,
+      "accuracy": 99.55,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 4,
+      "sample_count": 221
+    },
+    "Grape___Black_rot": {
+      "mean_confidence": 82.53,
+      "median_confidence": 88.05,
+      "min_confidence": 28.72,
+      "accuracy": 96.82,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 5,
+      "sample_count": 220
+    },
+    "Grape___Esca_(Black_Measles)": {
+      "mean_confidence": 82.58,
+      "median_confidence": 88.89,
+      "min_confidence": 20.04,
+      "accuracy": 96.12,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 14,
+      "sample_count": 232
+    },
+    "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+      "mean_confidence": 86.72,
+      "median_confidence": 90.89,
+      "min_confidence": 33.69,
+      "accuracy": 100.0,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 6,
+      "sample_count": 220
+    },
+    "Grape___healthy": {
+      "mean_confidence": 93.4,
+      "median_confidence": 96.42,
+      "min_confidence": 47.49,
+      "accuracy": 100.0,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 1,
+      "sample_count": 79
+    },
+    "Orange___Haunglongbing_(Citrus_greening)": {
+      "mean_confidence": 75.91,
+      "median_confidence": 80.43,
+      "min_confidence": 16.97,
+      "accuracy": 99.31,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 78,
+      "sample_count": 1166
+    },
+    "Peach___Bacterial_spot": {
+      "mean_confidence": 68.18,
+      "median_confidence": 72.55,
+      "min_confidence": 14.96,
+      "accuracy": 88.18,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 68,
+      "sample_count": 440
+    },
+    "Peach___healthy": {
+      "mean_confidence": 92.62,
+      "median_confidence": 95.0,
+      "min_confidence": 77.51,
+      "accuracy": 100.0,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 0,
+      "sample_count": 21
+    },
+    "Pepper,_bell___Bacterial_spot": {
+      "mean_confidence": 77.35,
+      "median_confidence": 84.27,
+      "min_confidence": 14.95,
+      "accuracy": 96.12,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 13,
+      "sample_count": 129
+    },
+    "Pepper,_bell___healthy": {
+      "mean_confidence": 81.78,
+      "median_confidence": 87.7,
+      "min_confidence": 20.26,
+      "accuracy": 97.36,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 11,
+      "sample_count": 303
+    },
+    "Potato___Early_blight": {
+      "mean_confidence": 84.73,
+      "median_confidence": 91.69,
+      "min_confidence": 20.74,
+      "accuracy": 99.11,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 12,
+      "sample_count": 224
+    },
+    "Potato___Late_blight": {
+      "mean_confidence": 80.68,
+      "median_confidence": 86.12,
+      "min_confidence": 22.45,
+      "accuracy": 91.18,
+      "overconfident_wrong": 1,
+      "low_conf_correct": 9,
+      "sample_count": 204
+    },
+    "Potato___healthy": {
+      "mean_confidence": 80.94,
+      "median_confidence": 90.8,
+      "min_confidence": 19.88,
+      "accuracy": 87.5,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 1,
+      "sample_count": 16
+    },
+    "Raspberry___healthy": {
+      "mean_confidence": 93.94,
+      "median_confidence": 97.8,
+      "min_confidence": 49.79,
+      "accuracy": 100.0,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 1,
+      "sample_count": 180
+    },
+    "Soybean___healthy": {
+      "mean_confidence": 63.73,
+      "median_confidence": 65.98,
+      "min_confidence": 15.51,
+      "accuracy": 90.99,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 145,
+      "sample_count": 899
+    },
+    "Squash___Powdery_mildew": {
+      "mean_confidence": 78.14,
+      "median_confidence": 82.81,
+      "min_confidence": 14.43,
+      "accuracy": 97.89,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 21,
+      "sample_count": 379
+    },
+    "Strawberry___Leaf_scorch": {
+      "mean_confidence": 87.61,
+      "median_confidence": 92.64,
+      "min_confidence": 35.65,
+      "accuracy": 97.93,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 3,
+      "sample_count": 193
+    },
+    "Strawberry___healthy": {
+      "mean_confidence": 92.05,
+      "median_confidence": 95.85,
+      "min_confidence": 39.75,
+      "accuracy": 100.0,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 1,
+      "sample_count": 100
+    },
+    "Tomato___Bacterial_spot": {
+      "mean_confidence": 69.94,
+      "median_confidence": 75.67,
+      "min_confidence": 20.38,
+      "accuracy": 95.25,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 75,
+      "sample_count": 463
+    },
+    "Tomato___Early_blight": {
+      "mean_confidence": 61.66,
+      "median_confidence": 64.77,
+      "min_confidence": 15.09,
+      "accuracy": 75.0,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 30,
+      "sample_count": 184
+    },
+    "Tomato___Late_blight": {
+      "mean_confidence": 60.27,
+      "median_confidence": 60.79,
+      "min_confidence": 12.29,
+      "accuracy": 76.15,
+      "overconfident_wrong": 1,
+      "low_conf_correct": 71,
+      "sample_count": 369
+    },
+    "Tomato___Leaf_Mold": {
+      "mean_confidence": 79.36,
+      "median_confidence": 87.96,
+      "min_confidence": 25.03,
+      "accuracy": 95.71,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 11,
+      "sample_count": 140
+    },
+    "Tomato___Septoria_leaf_spot": {
+      "mean_confidence": 54.18,
+      "median_confidence": 52.36,
+      "min_confidence": 14.09,
+      "accuracy": 70.83,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 77,
+      "sample_count": 312
+    },
+    "Tomato___Spider_mites Two-spotted_spider_mite": {
+      "mean_confidence": 71.3,
+      "median_confidence": 76.12,
+      "min_confidence": 19.12,
+      "accuracy": 92.06,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 38,
+      "sample_count": 340
+    },
+    "Tomato___Target_Spot": {
+      "mean_confidence": 64.82,
+      "median_confidence": 67.66,
+      "min_confidence": 13.22,
+      "accuracy": 82.88,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 45,
+      "sample_count": 257
+    },
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+      "mean_confidence": 70.2,
+      "median_confidence": 76.28,
+      "min_confidence": 11.59,
+      "accuracy": 91.21,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 160,
+      "sample_count": 1103
+    },
+    "Tomato___Tomato_mosaic_virus": {
+      "mean_confidence": 89.6,
+      "median_confidence": 93.17,
+      "min_confidence": 49.26,
+      "accuracy": 100.0,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 1,
+      "sample_count": 78
+    },
+    "Tomato___healthy": {
+      "mean_confidence": 80.45,
+      "median_confidence": 85.58,
+      "min_confidence": 19.59,
+      "accuracy": 97.32,
+      "overconfident_wrong": 0,
+      "low_conf_correct": 11,
+      "sample_count": 336
+    }
+  }
+}

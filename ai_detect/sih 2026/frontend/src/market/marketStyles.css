@@ -1,0 +1,1789 @@
+/* ============================================================
+   FASAL DRISTHI — PREMIUM MARKETPLACE DESIGN SYSTEM
+   Quality Bar: Target UI Reference Architecture
+   Mobile-First: Strict 2-Column Product Grid & Natural Document Flow
+   ============================================================ */
+
+.fd-market-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 14px 100px;
+  font-family: var(--font-main, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif);
+  color: var(--ink, #0f172a);
+  box-sizing: border-box;
+}
+
+/* ──────────────────────────────────────────
+   1. MARKET HEADER
+   ────────────────────────────────────────── */
+.fd-market-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.fd-market-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fd-market-title-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fd-market-back-cat-btn {
+  background: none;
+  border: none;
+  color: var(--ink, #0f172a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.15s ease;
+}
+
+.fd-market-back-cat-btn:hover {
+  background: var(--bg-hover, #f1f5f9);
+}
+
+.fd-market-main-title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink, #0f172a);
+  margin: 0;
+  line-height: 1.15;
+}
+
+.fd-market-subtitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+  margin: 2px 0 0;
+}
+
+.fd-market-header-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fd-header-circle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-subtle, #f8fafc);
+  border: 1px solid var(--line, #e2e8f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink, #0f172a);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fd-header-circle-btn:hover {
+  background: #f1f5f9;
+}
+
+.fd-header-notif-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 800;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+}
+
+/* Farm Location Pill */
+.fd-market-location-bar {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 2px 0;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.fd-market-location-bar:hover {
+  color: #16a34a;
+}
+
+.fd-location-icon {
+  color: #16a34a;
+  flex-shrink: 0;
+}
+
+.fd-location-text {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: #334155;
+}
+
+.fd-location-arrow {
+  color: #94a3b8;
+}
+
+/* ──────────────────────────────────────────
+   2. SEARCH SECTION (Normal Document Flow)
+   ────────────────────────────────────────── */
+.fd-market-search-section {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.fd-market-search-bar {
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 0 12px;
+  height: 44px;
+  transition: all 0.2s ease;
+}
+
+.fd-market-search-bar:focus-within {
+  background: #ffffff;
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
+}
+
+.fd-search-icon {
+  color: #64748b;
+  flex-shrink: 0;
+}
+
+.fd-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 0 10px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.fd-search-input::placeholder {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.fd-search-clear-btn,
+.fd-search-mic-btn {
+  background: none;
+  border: none;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.fd-search-pills-row {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 8px 0 2px;
+  scrollbar-width: none;
+}
+
+.fd-search-pills-row::-webkit-scrollbar {
+  display: none;
+}
+
+.fd-search-pill {
+  white-space: nowrap;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.fd-search-pill:hover,
+.fd-search-pill.active {
+  background: #dcfce7;
+  color: #15803d;
+  border-color: #bbf7d0;
+}
+
+/* ──────────────────────────────────────────
+   3. HERO BANNER ("Farm smarter. Buy better.")
+   ────────────────────────────────────────── */
+.fd-market-hero {
+  margin: 6px 0 16px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #064e3b 0%, #15803d 60%, #16a34a 100%);
+  color: #ffffff;
+  padding: 16px 16px 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.18);
+}
+
+.fd-market-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.fd-market-hero-content {
+  flex: 1;
+}
+
+.fd-market-hero-title {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 4px;
+  color: #ffffff;
+}
+
+.fd-market-hero-text {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0.92;
+  margin: 0 0 10px;
+  color: #e2e8f0;
+}
+
+.fd-market-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  color: #15803d;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.fd-market-hero-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.fd-market-hero-avatar-wrap {
+  flex-shrink: 0;
+}
+
+.fd-hero-farmer-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.fd-market-hero-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.fd-hero-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease;
+}
+
+.fd-hero-dot.active {
+  width: 14px;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+/* ──────────────────────────────────────────
+   4. SHOP BY CATEGORY (2-Row App Grid)
+   ────────────────────────────────────────── */
+.fd-market-category-section {
+  margin: 12px 0 16px;
+}
+
+.fd-market-section-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.fd-market-section-heading {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.fd-market-see-all-btn {
+  background: none;
+  border: none;
+  color: #16a34a;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.fd-category-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.fd-category-tile {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px 2px;
+  transition: transform 0.15s ease;
+}
+
+.fd-category-tile:hover {
+  transform: translateY(-2px);
+}
+
+.fd-category-tile-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: all 0.15s ease;
+}
+
+.fd-category-tile.active .fd-category-tile-icon {
+  outline: 2px solid #16a34a;
+  outline-offset: 2px;
+}
+
+.fd-category-tile-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #334155;
+  text-align: center;
+  line-height: 1.2;
+  max-width: 58px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fd-category-tile.active .fd-category-tile-label {
+  color: #15803d;
+  font-weight: 800;
+}
+
+/* ──────────────────────────────────────────
+   5. RECOMMENDED FOR YOUR FARM (Screen 1)
+   ────────────────────────────────────────── */
+.fd-farm-rec-section {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 16px;
+  padding: 12px;
+  margin: 14px 0 18px;
+}
+
+.fd-farm-rec-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.fd-farm-rec-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: #14532d;
+  margin: 0;
+}
+
+.fd-farm-rec-sub {
+  font-size: 11px;
+  color: #166534;
+  margin: 2px 0 0;
+}
+
+.fd-farm-rec-arrow-btn {
+  background: none;
+  border: none;
+  color: #15803d;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fd-farm-rec-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.fd-farm-rec-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.fd-farm-rec-img-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  background: #ffffff;
+  overflow: hidden;
+  border: 1px solid #dcfce7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.fd-farm-rec-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.fd-farm-rec-card-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #14532d;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* ──────────────────────────────────────────
+   6. FILTER & SORT BAR (Equal Width Buttons)
+   ────────────────────────────────────────── */
+.fd-filter-sort-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 14px 0 10px;
+}
+
+.fd-bar-filter-btn {
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.fd-bar-filter-btn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.fd-filter-count-badge {
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fd-bar-sort-wrap {
+  position: relative;
+}
+
+.fd-bar-sort-select {
+  width: 100%;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0 10px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #0f172a;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* Catalog Heading & Count */
+.fd-catalog-heading-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 10px 0 8px;
+}
+
+.fd-catalog-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.fd-catalog-count {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+/* ──────────────────────────────────────────
+   7. MAIN PRODUCT GRID — STRICT 2 COLUMNS ON MOBILE!
+   ────────────────────────────────────────── */
+.fd-market-products-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  margin-top: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Enforce 2 columns inside mobile app preview frame regardless of desktop monitor size */
+.mobile-app-frame .fd-market-products-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+}
+
+/* ──────────────────────────────────────────
+   8. PRODUCT CARD (Screen 2 Architecture)
+   ────────────────────────────────────────── */
+.fd-product-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.fd-product-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+}
+
+/* Image Container: Clean studio container, 1:1 ratio, contain packaging */
+.fd-product-card-img-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.fd-product-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.fd-product-card:hover .fd-product-card-img {
+  transform: scale(1.03);
+}
+
+/* Status Badges */
+.fd-badge-status {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 7px;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+
+.fd-badge-status.bestseller {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.fd-badge-status.popular {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.fd-badge-status.new {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.fd-badge-status.discount {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Wishlist Heart Button */
+.fd-card-wishlist-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  border: 1px solid #e2e8f0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.fd-card-wishlist-btn:hover {
+  transform: scale(1.1);
+  background: #ffffff;
+}
+
+/* Card Body */
+.fd-product-card-body {
+  padding: 8px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* 2-line title strictly enforced */
+.fd-product-card-name {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #0f172a;
+  margin: 0;
+  height: 35px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Brand & Pack row */
+.fd-product-card-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+  margin: 3px 0 4px;
+}
+
+.fd-product-card-brand {
+  color: #475569;
+}
+
+.fd-meta-dot {
+  color: #cbd5e1;
+}
+
+.fd-product-card-pack {
+  color: #64748b;
+}
+
+/* Rating Row */
+.fd-product-card-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+
+.fd-star-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: #fef9c3;
+  color: #854d0e;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+
+.fd-rev-count {
+  font-size: 10.5px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Pricing Row */
+.fd-product-card-pricing {
+  margin-top: auto;
+  padding: 4px 0 6px;
+}
+
+.fd-price-main-row {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.fd-product-price {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.fd-product-mrp {
+  font-size: 11px;
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.fd-product-discount-tag {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+/* Available on Marketplace source row */
+.fd-available-source-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #15803d;
+  margin-top: 3px;
+}
+
+.fd-check-icon {
+  color: #16a34a;
+  flex-shrink: 0;
+}
+
+/* Full Width Buy Now CTA */
+.fd-product-card-actions {
+  margin-top: 6px;
+}
+
+.fd-btn-buy-full {
+  width: 100%;
+  height: 38px;
+  background: #16a34a;
+  color: #ffffff;
+  border: none;
+  border-radius: 9px;
+  font-size: 12.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.fd-btn-buy-full:hover {
+  background: #15803d;
+  transform: translateY(-1px);
+}
+
+/* ──────────────────────────────────────────
+   9. PRODUCT DETAILS MODAL (Screens 4 & 5)
+   ────────────────────────────────────────── */
+.fd-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.fd-modal-sheet {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  max-height: 92vh;
+  border-radius: 24px 24px 0 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2);
+  animation: fdSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fdSlideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.fd-modal-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.fd-modal-nav-icon-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.fd-modal-nav-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.fd-modal-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fd-modal-scroll-area {
+  padding: 14px 16px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Studio Hero Image Container */
+.fd-modal-hero-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-height: 280px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.fd-modal-hero-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.fd-modal-counter-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(15, 23, 42, 0.7);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+/* Thumbnail Gallery */
+.fd-modal-thumb-row {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0 14px;
+  overflow-x: auto;
+}
+
+.fd-modal-thumb-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 10px;
+  border: 1.5px solid #e2e8f0;
+  background: #ffffff;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.fd-modal-thumb-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.fd-modal-thumb-box.active {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.2);
+}
+
+.fd-modal-brand-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #d97706;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.fd-modal-product-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.fd-modal-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.fd-modal-review-text {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.fd-modal-verified-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.fd-modal-pricing-box {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+.fd-modal-price-val {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.fd-modal-mrp-val {
+  font-size: 13px;
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.fd-modal-discount-tag {
+  font-size: 12px;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+.fd-modal-section-label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+/* Pack Size Chips */
+.fd-modal-pack-section {
+  margin-bottom: 14px;
+}
+
+.fd-modal-pack-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.fd-modal-pack-chip {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #e2e8f0;
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.fd-modal-pack-chip.active {
+  border-color: #16a34a;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+/* Key Features (Screen 4) */
+.fd-modal-features-section {
+  margin-bottom: 14px;
+}
+
+.fd-modal-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fd-modal-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.fd-feature-check {
+  color: #16a34a;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.fd-modal-desc-section {
+  margin-bottom: 14px;
+}
+
+.fd-modal-desc-text {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #475569;
+  margin: 0;
+}
+
+.fd-modal-specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.fd-modal-specs-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.fd-spec-key {
+  color: #64748b;
+  font-weight: 600;
+  width: 40%;
+}
+
+.fd-spec-val {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.fd-modal-advisory-box {
+  display: flex;
+  gap: 10px;
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 11.5px;
+  color: #92400e;
+  line-height: 1.45;
+  margin: 14px 0 8px;
+}
+
+.fd-advisory-icon {
+  color: #d97706;
+  flex-shrink: 0;
+}
+
+/* Modal Bottom Sticky Action Bar */
+.fd-modal-bottom-bar {
+  padding: 12px 16px;
+  border-top: 1px solid #f1f5f9;
+  background: #ffffff;
+  display: flex;
+  gap: 10px;
+}
+
+.fd-btn-buy-primary {
+  flex: 1.5;
+  height: 44px;
+  background: #16a34a;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.fd-btn-buy-primary:hover {
+  background: #15803d;
+}
+
+.fd-btn-compare-action {
+  flex: 1;
+  height: 44px;
+  background: #ffffff;
+  color: #0f172a;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.fd-btn-compare-action:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.fd-btn-app-action {
+  height: 44px;
+  padding: 0 12px;
+  background: #f0fdf4;
+  color: #166534;
+  border: 1.5px solid #bbf7d0;
+  border-radius: 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.fd-btn-app-action:hover {
+  background: #dcfce7;
+  border-color: #86efac;
+  color: #14532d;
+}
+
+/* ──────────────────────────────────────────
+   10. COMPARE PRICES VIEW (Screen 5)
+   ────────────────────────────────────────── */
+.fd-compare-screen-view {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fd-compare-header-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 10px 12px;
+}
+
+.fd-compare-thumb {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 2px;
+  border: 1px solid #e2e8f0;
+}
+
+.fd-compare-prod-name {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.fd-compare-prod-brand {
+  font-size: 11.5px;
+  color: #64748b;
+}
+
+.fd-compare-section-title-wrap {
+  margin: 4px 0;
+}
+
+.fd-compare-section-heading {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.fd-compare-section-sub {
+  font-size: 12px;
+  color: #64748b;
+  margin: 2px 0 0;
+}
+
+.fd-compare-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fd-compare-row-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fd-compare-store-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.fd-compare-store-name {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.fd-badge-best-price {
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.fd-compare-verified-tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.fd-compare-pricing-col {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fd-compare-price-line {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.fd-compare-val {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.fd-compare-mrp {
+  font-size: 10.5px;
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.fd-compare-off {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+.fd-compare-cta-btn {
+  height: 34px;
+  background: #16a34a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.fd-compare-trust-notice {
+  display: flex;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 11px;
+  color: #475569;
+  line-height: 1.4;
+}
+
+/* ──────────────────────────────────────────
+   11. FILTER DRAWER (Screen 3)
+   ────────────────────────────────────────── */
+.fd-filter-drawer {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  border-radius: 24px 24px 0 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2);
+  animation: fdSlideUp 0.22s ease-out;
+}
+
+.fd-filter-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.fd-filter-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fd-modal-close-btn {
+  background: none;
+  border: none;
+  color: #0f172a;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fd-filter-title {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0;
+  color: #0f172a;
+}
+
+.fd-filter-reset-link {
+  background: none;
+  border: none;
+  color: #16a34a;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.fd-filter-scroll-body {
+  padding: 14px 16px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.fd-filter-group {
+  margin-bottom: 16px;
+}
+
+.fd-filter-group-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.fd-filter-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.fd-filter-range-val {
+  font-size: 12px;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+.fd-filter-chips-wrap {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.fd-filter-pill-chip {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1.5px solid #e2e8f0;
+  background: #ffffff;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s ease;
+}
+
+.fd-filter-pill-chip.active {
+  background: #dcfce7;
+  color: #15803d;
+  border-color: #86efac;
+  font-weight: 700;
+}
+
+.fd-filter-search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 6px 10px;
+  margin-bottom: 8px;
+}
+
+.fd-filter-search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 12px;
+  flex: 1;
+}
+
+.fd-filter-checkbox-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.fd-filter-checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fd-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.fd-checkbox-row input {
+  display: none;
+}
+
+.fd-custom-checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  border: 1.5px solid #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  transition: all 0.15s ease;
+}
+
+.fd-checkbox-row input:checked + .fd-custom-checkbox {
+  background: #16a34a;
+  border-color: #16a34a;
+}
+
+.fd-filter-drawer-bottom {
+  padding: 12px 16px;
+  border-top: 1px solid #f1f5f9;
+  background: #ffffff;
+}
+
+.fd-btn-apply-filters {
+  width: 100%;
+  height: 44px;
+  background: #16a34a;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.fd-btn-apply-filters:hover {
+  background: #15803d;
+}
+
+/* ──────────────────────────────────────────
+   12. TRUSTED MARKETPLACES SECTION (Screen 6)
+   ────────────────────────────────────────── */
+.fd-market-partners-section {
+  margin: 24px 0 10px;
+}
+
+.fd-marketplace-partners-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fd-partner-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.fd-partner-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fd-partner-name {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.fd-partner-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.fd-partner-desc {
+  font-size: 12px;
+  color: #475569;
+  line-height: 1.45;
+  margin: 2px 0 8px;
+}
+
+.fd-partner-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* ──────────────────────────────────────────
+   13. EMPTY & SKELETON STATES
+   ────────────────────────────────────────── */
+.fd-market-empty-state {
+  text-align: center;
+  padding: 40px 16px;
+  background: #f8fafc;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 18px;
+  margin: 16px 0;
+}
+
+.fd-empty-icon {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.fd-empty-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 4px;
+}
+
+.fd-empty-text {
+  font-size: 12.5px;
+  color: #64748b;
+  margin: 0 0 14px;
+}
+
+.fd-btn-retry {
+  padding: 8px 18px;
+  background: #16a34a;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.fd-market-skeleton-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  margin-top: 8px;
+}
+
+.fd-skeleton-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  height: 250px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.fd-skeleton {
+  background: #f1f5f9;
+  border-radius: 6px;
+  animation: pulse 1.5s infinite;
+}
+
+.fd-skeleton-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+}
+
+.fd-skeleton-line {
+  height: 10px;
+  width: 70%;
+}
+
+.fd-skeleton-line.full {
+  width: 100%;
+}
+
+.fd-skeleton-btn {
+  margin-top: auto;
+  height: 36px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

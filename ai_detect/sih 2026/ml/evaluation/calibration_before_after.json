@@ -1,0 +1,273 @@
+{
+  "temperature": 0.71392,
+  "test_samples": 10547,
+  "predictions_preserved": true,
+  "before_calibration": {
+    "ece_pct": 17.39,
+    "mce_pct": 34.06,
+    "nll": 0.3959,
+    "brier_score": 0.152986,
+    "accuracy_pct": 93.14,
+    "referral_rates": {
+      "0.5": 14.12,
+      "0.6": 22.03,
+      "0.8": 46.37
+    },
+    "bins": [
+      {
+        "lo": 0.0,
+        "hi": 0.0667,
+        "count": 0,
+        "avg_confidence": 0.0333,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "lo": 0.0667,
+        "hi": 0.1333,
+        "count": 3,
+        "avg_confidence": 0.1236,
+        "avg_accuracy": 0.3333,
+        "gap": 0.2097
+      },
+      {
+        "lo": 0.1333,
+        "hi": 0.2,
+        "count": 69,
+        "avg_confidence": 0.1779,
+        "avg_accuracy": 0.3623,
+        "gap": 0.1844
+      },
+      {
+        "lo": 0.2,
+        "hi": 0.2667,
+        "count": 189,
+        "avg_confidence": 0.2347,
+        "avg_accuracy": 0.4709,
+        "gap": 0.2362
+      },
+      {
+        "lo": 0.2667,
+        "hi": 0.3333,
+        "count": 248,
+        "avg_confidence": 0.2985,
+        "avg_accuracy": 0.625,
+        "gap": 0.3265
+      },
+      {
+        "lo": 0.3333,
+        "hi": 0.4,
+        "count": 357,
+        "avg_confidence": 0.3677,
+        "avg_accuracy": 0.6835,
+        "gap": 0.3157
+      },
+      {
+        "lo": 0.4,
+        "hi": 0.4667,
+        "count": 387,
+        "avg_confidence": 0.4332,
+        "avg_accuracy": 0.7183,
+        "gap": 0.2851
+      },
+      {
+        "lo": 0.4667,
+        "hi": 0.5333,
+        "count": 505,
+        "avg_confidence": 0.5018,
+        "avg_accuracy": 0.8257,
+        "gap": 0.3239
+      },
+      {
+        "lo": 0.5333,
+        "hi": 0.6,
+        "count": 566,
+        "avg_confidence": 0.5675,
+        "avg_accuracy": 0.9081,
+        "gap": 0.3406
+      },
+      {
+        "lo": 0.6,
+        "hi": 0.6667,
+        "count": 687,
+        "avg_confidence": 0.6346,
+        "avg_accuracy": 0.9403,
+        "gap": 0.3057
+      },
+      {
+        "lo": 0.6667,
+        "hi": 0.7333,
+        "count": 831,
+        "avg_confidence": 0.701,
+        "avg_accuracy": 0.9639,
+        "gap": 0.2629
+      },
+      {
+        "lo": 0.7333,
+        "hi": 0.8,
+        "count": 1049,
+        "avg_confidence": 0.768,
+        "avg_accuracy": 0.9828,
+        "gap": 0.2149
+      },
+      {
+        "lo": 0.8,
+        "hi": 0.8667,
+        "count": 1425,
+        "avg_confidence": 0.8348,
+        "avg_accuracy": 0.9874,
+        "gap": 0.1525
+      },
+      {
+        "lo": 0.8667,
+        "hi": 0.9333,
+        "count": 1810,
+        "avg_confidence": 0.9013,
+        "avg_accuracy": 0.9928,
+        "gap": 0.0915
+      },
+      {
+        "lo": 0.9333,
+        "hi": 1.0,
+        "count": 2421,
+        "avg_confidence": 0.9666,
+        "avg_accuracy": 0.9992,
+        "gap": 0.0326
+      }
+    ]
+  },
+  "after_calibration": {
+    "ece_pct": 5.9,
+    "mce_pct": 18.6,
+    "nll": 0.2588,
+    "brier_score": 0.110413,
+    "accuracy_pct": 93.14,
+    "referral_rates": {
+      "0.5": 6.23,
+      "0.6": 10.47,
+      "0.8": 22.16
+    },
+    "bins": [
+      {
+        "lo": 0.0,
+        "hi": 0.0667,
+        "count": 0,
+        "avg_confidence": 0.0333,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "lo": 0.0667,
+        "hi": 0.1333,
+        "count": 0,
+        "avg_confidence": 0.1,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "lo": 0.1333,
+        "hi": 0.2,
+        "count": 7,
+        "avg_confidence": 0.181,
+        "avg_accuracy": 0.2857,
+        "gap": 0.1047
+      },
+      {
+        "lo": 0.2,
+        "hi": 0.2667,
+        "count": 43,
+        "avg_confidence": 0.2397,
+        "avg_accuracy": 0.2326,
+        "gap": 0.0071
+      },
+      {
+        "lo": 0.2667,
+        "hi": 0.3333,
+        "count": 122,
+        "avg_confidence": 0.3008,
+        "avg_accuracy": 0.4098,
+        "gap": 0.1091
+      },
+      {
+        "lo": 0.3333,
+        "hi": 0.4,
+        "count": 157,
+        "avg_confidence": 0.3664,
+        "avg_accuracy": 0.5223,
+        "gap": 0.1559
+      },
+      {
+        "lo": 0.4,
+        "hi": 0.4667,
+        "count": 195,
+        "avg_confidence": 0.4345,
+        "avg_accuracy": 0.6205,
+        "gap": 0.186
+      },
+      {
+        "lo": 0.4667,
+        "hi": 0.5333,
+        "count": 282,
+        "avg_confidence": 0.5003,
+        "avg_accuracy": 0.6312,
+        "gap": 0.1309
+      },
+      {
+        "lo": 0.5333,
+        "hi": 0.6,
+        "count": 298,
+        "avg_confidence": 0.5661,
+        "avg_accuracy": 0.6879,
+        "gap": 0.1218
+      },
+      {
+        "lo": 0.6,
+        "hi": 0.6667,
+        "count": 315,
+        "avg_confidence": 0.6334,
+        "avg_accuracy": 0.7937,
+        "gap": 0.1602
+      },
+      {
+        "lo": 0.6667,
+        "hi": 0.7333,
+        "count": 378,
+        "avg_confidence": 0.7021,
+        "avg_accuracy": 0.8413,
+        "gap": 0.1392
+      },
+      {
+        "lo": 0.7333,
+        "hi": 0.8,
+        "count": 540,
+        "avg_confidence": 0.7685,
+        "avg_accuracy": 0.9093,
+        "gap": 0.1407
+      },
+      {
+        "lo": 0.8,
+        "hi": 0.8667,
+        "count": 781,
+        "avg_confidence": 0.8363,
+        "avg_accuracy": 0.9552,
+        "gap": 0.1189
+      },
+      {
+        "lo": 0.8667,
+        "hi": 0.9333,
+        "count": 1431,
+        "avg_confidence": 0.9042,
+        "avg_accuracy": 0.9783,
+        "gap": 0.0742
+      },
+      {
+        "lo": 0.9333,
+        "hi": 1.0,
+        "count": 5998,
+        "avg_confidence": 0.9795,
+        "avg_accuracy": 0.9955,
+        "gap": 0.016
+      }
+    ]
+  }
+}

@@ -1,0 +1,115 @@
+# =====================================================================
+# Fasal Dristhi — Root .gitignore
+# Preserves existing rules from ai_detect/sih 2026/.gitignore while
+# safeguarding secrets, environments, large datasets, and model weights.
+# =====================================================================
+
+# ── 1. Secrets & Environment Configurations ──────────────────────────
+# Ignore all active environment files and local secrets
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+**/.env
+**/.env.*
+**/.env.local
+
+# Explicitly track all example environment templates
+!.env.example
+!**/.env.example
+
+# ── 2. Dependencies & Package Managers ──────────────────────────────
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── 3. Python Virtual Environments & Bytecode ────────────────────────
+venv/
+**/venv/
+.venv/
+**/.venv/
+env/
+**/env/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+**/.pytest_cache/
+.mypy_cache/
+**/.mypy_cache/
+.ruff_cache/
+**/.ruff_cache/
+.coverage
+htmlcov/
+
+# ── 4. Build Outputs & Development Caches ────────────────────────────
+dist/
+**/dist/
+build/
+**/build/
+.ref-frames/
+**/.ref-frames/
+.vite/
+**/.vite/
+.cache/
+**/.cache/
+
+# ── 5. Datasets & Bulky Image Assets ─────────────────────────────────
+# Raw dataset directories containing thousands of images
+**/ml/datasets/
+**/ml/datasets/**
+**/ml/test_data/
+**/ml/test_data/**
+tree_cache.json
+**/tree_cache.json
+
+# ── 6. Machine Learning Model Weights & Unverified Checkpoints ───────
+# Ignored until trained model inclusion is explicitly approved & verified
+*.pth
+*.pth*
+*.pt
+*.safetensors
+*.onnx
+*.engine
+*.bin
+*.h5
+*.tflite
+*.backup
+*.untrained_backup
+**/*.pth
+**/*.pth*
+**/*.pt
+**/*.safetensors
+**/*.onnx
+**/*.engine
+**/*.bin
+**/*.h5
+**/*.tflite
+**/*.backup
+**/*.untrained_backup
+
+# Explicitly keep lightweight model metadata, configs & calibration files
+!**/models/class_indices.json
+!**/models/temperature_T.json
+
+# ── 7. Operating System & Editor Metadata ─────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ── 8. Logs & Temporary Files ────────────────────────────────────────
+logs/
+**/logs/
+*.log
+*.tmp
+*.temp

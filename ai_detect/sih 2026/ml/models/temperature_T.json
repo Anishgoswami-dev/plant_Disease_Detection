@@ -1,0 +1,19 @@
+{
+  "temperature": 0.71392,
+  "calibration_set": "val",
+  "calibration_samples": 1748,
+  "checkpoint": "plant_disease_candidate_efficientnet.pth",
+  "metrics_before": {
+    "nll": 0.3862,
+    "ece_pct": 16.9,
+    "brier_score": 0.1482,
+    "accuracy_pct": 93.36
+  },
+  "metrics_after": {
+    "nll": 0.2548,
+    "ece_pct": 5.98,
+    "brier_score": 0.1082,
+    "accuracy_pct": 93.36
+  },
+  "predictions_preserved": true
+}
