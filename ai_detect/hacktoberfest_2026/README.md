@@ -19,6 +19,7 @@ This directory houses the three core subsystems of the **Fasal Dristhi (CropSent
    - Express server handling JWT authentication, multipart file uploads, and proxying scan requests to the ML microservice.
    - Resilient data layer: connects to MongoDB Atlas with DNS preloading, with automatic in-memory store fallback when offline.
    - **ElevenLabs Multilingual Text-to-Speech:** Server-side synthesis via `voiceService.js` (`POST /api/voice/tts`), streaming audio for Kisan AI Assistant with automatic browser fallback.
+   - **Backboard.io Persistent AI Memory:** Assistant-level memory layer (`backboardService.js`) with per-farmer isolation, thread continuity, and fact extraction for Kisan AI Assistant.
 
 3. **`frontend/`** — React / Vite Farmer User Interface (Port 5173)
    - Diagnostic workflow: scan upload, real-time bounding box visualization, disease identification, and advisory cards.

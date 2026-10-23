@@ -1,6 +1,24 @@
-# Fasal Dristhi (CropSentinel)
+<div align="center">
 
-An intelligent, calibrated agro-advisory and plant disease diagnostic system. Fasal Dristhi combines deep-learning computer vision for foliar disease classification, classical computer vision for lesion localization and severity quantification, and an agronomy knowledge base providing contextual management recommendations.
+# 🌾 Fasal Dristhi (CropSentinel)
+### Intelligent Calibrated Plant Disease Diagnostic & Agro-Advisory Platform
+
+[![React](https://img.shields.io/badge/Frontend-React_18_%2B_Vite-61DAFB?logo=react&logoColor=black)](https://vitejs.dev/)
+[![Node.js](https://img.shields.io/badge/Backend-Node.js_%2B_Express-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![FastAPI](https://img.shields.io/badge/ML_API-FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![PyTorch](https://img.shields.io/badge/Deep_Learning-PyTorch-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![MongoDB Atlas](https://img.shields.io/badge/Database-MongoDB_Atlas-47A248?logo=mongodb&logoColor=white)](https://www.mongodb.com/atlas)
+[![ElevenLabs](https://img.shields.io/badge/Voice-ElevenLabs_HD-black)](https://elevenlabs.io/)
+[![Backboard.io](https://img.shields.io/badge/Memory-Backboard.io_Persistent_AI-blueviolet)](https://backboard.io/)
+[![Hacktoberfest 2026](https://img.shields.io/badge/Hacktoberfest-2026-FF8800?logo=hacktoberfest&logoColor=white)](https://hacktoberfest.com/)
+
+<br />
+
+<img src="docs/assets/fasal_dristhi_app_preview.png" alt="Fasal Dristhi Farmer Application Preview" width="320" style="border-radius: 20px; box-shadow: 0 12px 40px rgba(0,0,0,0.18); border: 1px solid #e2e8f0;" />
+
+<p><em>Fasal Dristhi Farmer Portal: Real-time spray weather, instant leaf diagnostic scout, agronomy tools, and Kisan AI Assistant.</em></p>
+
+</div>
 
 ---
 
@@ -12,13 +30,20 @@ The repository root is `D:\Plant_Disease_Detection`. The application microservic
 D:\Plant_Disease_Detection\
 ├── .gitignore                          # Root Git exclusion rules (protects all .env secrets)
 ├── README.md                           # Master repository documentation
+├── docs/
+│   └── assets/
+│       └── fasal_dristhi_app_preview.png # Application UI interface screenshot
 └── ai_detect/
     └── hacktoberfest_2026/             # Application root (Hacktoberfest Edition)
         ├── .env.example                # Shared environment configuration template
         ├── backend/                    # Node.js / Express REST API gateway
         │   ├── index.js                # Core API, JWT auth, scan processing & fallbacks
         │   ├── voiceService.js         # ElevenLabs Text-to-Speech integration module
+        │   ├── ai/
+        │   │   ├── orchestrator.js     # Multi-model AI orchestrator (Gemini + OpenAI)
+        │   │   └── backboardService.js # Backboard.io Persistent AI Memory service
         │   ├── test_voice_tts.py       # ElevenLabs TTS automated test suite
+        │   ├── test_backboard_memory.py# Backboard persistent memory test suite
         │   ├── package.json            # Backend dependency manifest
         │   └── .env.example            # Backend-specific environment template
         ├── frontend/                   # React + Vite agricultural user interface
@@ -51,6 +76,7 @@ D:\Plant_Disease_Detection\
 [ Backend Gateway (Port 4000) ]
        ├── Database: MongoDB Atlas (Fallback: Resilient In-Memory Store)
        ├── Speech Synthesis: ElevenLabs Multilingual REST API (Fallback: Device SpeechSynthesis)
+       ├── Persistent AI Memory: Backboard.io Assistant Memory (Fallback: In-Memory / Stateless)
        └── Reverse Proxy to ML Service
        │
        ▼ (HTTP / Multipart)
@@ -119,6 +145,13 @@ The model classifies 38 distinct crop-disease combinations across 14 agricultura
 - **Endpoint:** `POST /api/voice/tts` and `POST /api/ai/tts` in backend gateway (`voiceService.js`).
 - **Resilient Fallback:** Automatically switches to the client device's native `window.speechSynthesis` when offline or when no API key is configured.
 - **Frontend Audio Management:** Implements full object URL lifecycle management with memory leak prevention (`URL.revokeObjectURL`) and toggleable play/stop controls.
+
+### Persistent AI Memory (Backboard.io)
+- **Cross-Session Continuity:** Integrated with Backboard.io REST API (`backboardService.js`) to provide Kisan AI Assistant with persistent memory across conversation sessions.
+- **Multi-Tenant Farmer Isolation:** Automatically maps each authenticated farmer to an independent Backboard assistant resource (`asst_...`) stored securely in MongoDB Atlas (`FarmerMemoryMapping` schema). Farmer A and Farmer B can never access each other's memories.
+- **Context Augmentation:** Relevant historical facts (crop acreage, past disease occurrences, soil conditions) are retrieved and injected into the Gemini/OpenAI prompt without displacing core LLM consensus reasoning.
+- **One-Call Fact Extraction:** Conversation turns are recorded with `memory: "Auto"` for automatic fact extraction.
+- **Graceful Fallback:** If `BACKBOARD_API_KEY` is unconfigured or unreachable, the assistant continues working in stateless mode with zero disruption.
 
 ### Visual Lesion Localization & Severity
 - Lesion bounding boxes, contours, and damaged tissue percentages are calculated via **classical OpenCV image processing** (HSV color thresholding, green leaf masking, and morphological contour detection in `detection.py` and `severity.py`).
@@ -239,6 +272,13 @@ python test_step3_integration.py
 cd "D:\Plant_Disease_Detection\ai_detect/hacktoberfest_2026\backend"
 # 16 automated tests covering ElevenLabs API client, audio streaming, input sanitization, and fallback triggers
 python test_voice_tts.py
+```
+
+### Persistent AI Memory Verification (Backboard.io)
+```powershell
+cd "D:\Plant_Disease_Detection\ai_detect/hacktoberfest_2026\backend"
+# Unit tests, multi-farmer tenant isolation, thread continuity, and live endpoint verification
+python test_backboard_memory.py
 ```
 
 ---

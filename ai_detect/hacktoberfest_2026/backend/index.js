@@ -1497,6 +1497,15 @@ const Notification = mongoose.models.Notification || mongoose.model('Notificatio
 const DeviceToken = mongoose.models.DeviceToken || mongoose.model('DeviceToken', deviceTokenSchema)
 const Setting = mongoose.models.Setting || mongoose.model('Setting', settingSchema)
 
+// 🧠 Persistent AI Memory Mapping Schema (Backboard.io)
+const farmerMemoryMappingSchema = new mongoose.Schema({
+  farmerId: { type: String, required: true, unique: true, index: true },
+  assistantId: { type: String, required: true },
+  activeThreadId: { type: String, default: null },
+  lastUsedAt: { type: Date, default: Date.now }
+})
+const FarmerMemoryMapping = mongoose.models.FarmerMemoryMapping || mongoose.model('FarmerMemoryMapping', farmerMemoryMappingSchema)
+
 
 // Connect to MongoDB
 if (process.env.MONGODB_URI) {
@@ -4588,13 +4597,17 @@ const handleGuruChat = async (req, res) => {
       }
     }
 
+    const farmerId = req.user?.userId || req.user?.id || req.body?.farmerId || req.body?.userId || 'default_farmer'
+
     const result = await fasalGuruOrchestrator.processQuery({
       message,
       images,
       document: documentData,
       language,
       crop,
-      history
+      history,
+      farmerId,
+      mappingModel: databaseReady ? FarmerMemoryMapping : null
     })
 
     res.json(result)
@@ -4608,8 +4621,39 @@ const handleGuruChat = async (req, res) => {
   }
 }
 
-app.post('/api/guru/chat', upload.any(), handleGuruChat)
-app.post('/api/ai-chat', upload.any(), handleGuruChat)
+// 🧠 Backboard.io Persistent AI Memory Endpoints
+const handleGetMemories = async (req, res) => {
+  try {
+    const farmerId = req.user?.userId || req.user?.id || req.query?.farmerId || 'default_farmer'
+    const memories = await fasalGuruOrchestrator.backboard.getMemories(farmerId, {
+      mappingModel: databaseReady ? FarmerMemoryMapping : null
+    })
+    res.json({
+      success: true,
+      farmerId,
+      memories,
+      count: memories.length,
+      active: fasalGuruOrchestrator.backboard.isConfigured()
+    })
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message })
+  }
+}
+
+const handleMemoryStatus = async (req, res) => {
+  try {
+    const status = await fasalGuruOrchestrator.backboard.getStatus()
+    res.json(status)
+  } catch (err) {
+    res.status(500).json({ error: err.message })
+  }
+}
+
+app.post('/api/guru/chat', optionalAuth, upload.any(), handleGuruChat)
+app.post('/api/ai-chat', optionalAuth, upload.any(), handleGuruChat)
+app.get('/api/guru/memories', optionalAuth, handleGetMemories)
+app.get('/api/ai/memories', optionalAuth, handleGetMemories)
+app.get('/api/guru/memory/status', handleMemoryStatus)
 
 // 🎙️ ElevenLabs Text-to-Speech Endpoints (Task 3)
 app.post('/api/voice/tts', optionalAuth, handleTextToSpeech)

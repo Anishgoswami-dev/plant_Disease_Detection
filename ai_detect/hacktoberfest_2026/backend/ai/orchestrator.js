@@ -1,11 +1,13 @@
 import { OpenAIProvider } from './providers/OpenAIProvider.js'
 import { GeminiProvider } from './providers/GeminiProvider.js'
 import { fasalGuruAIConfig } from './config.js'
+import { backboardService } from './backboardService.js'
 
 export class FasalGuruOrchestrator {
   constructor() {
     this.openai = new OpenAIProvider()
     this.gemini = new GeminiProvider()
+    this.backboard = backboardService
   }
 
   /**
@@ -200,7 +202,9 @@ TASK:
     document = null,
     language = null,
     crop = null,
-    history = []
+    history = [],
+    farmerId = 'default_farmer',
+    mappingModel = null
   }) {
     const hasImages = Array.isArray(images) && images.length > 0
     const hasDocument = Boolean(document && (document.text || document.buffer))
@@ -213,6 +217,24 @@ TASK:
     let augmentedPrompt = message || ''
     if (crop && !augmentedPrompt.toLowerCase().includes(crop.toLowerCase())) {
       augmentedPrompt = `[Crop: ${crop}] ${augmentedPrompt}`
+    }
+
+    // 1b. Retrieve Persistent Memory context from Backboard.io (if configured)
+    let recalledMemories = []
+    let memoryContext = ''
+    if (this.backboard.isConfigured()) {
+      try {
+        recalledMemories = await this.backboard.getMemories(farmerId, { mappingModel })
+        if (recalledMemories?.length > 0) {
+          memoryContext = this.backboard.formatMemoryContext(recalledMemories)
+        }
+      } catch (memErr) {
+        console.warn('[Backboard] Memory retrieval error:', memErr.message)
+      }
+    }
+
+    if (memoryContext) {
+      augmentedPrompt = `${memoryContext}\n\nCurrent Farmer Query:\n${augmentedPrompt}`
     }
 
     // 2. Intelligent Routing based on intent
@@ -314,13 +336,29 @@ TASK:
       prompt: augmentedPrompt
     })
 
+    // 4. Record conversation turn to Backboard.io in the background (auto-extracts facts)
+    if (this.backboard.isConfigured() && synthesized?.finalAnswer) {
+      this.backboard.recordConversationTurn({
+        farmerId,
+        userMessage: message,
+        assistantReply: synthesized.finalAnswer,
+        crop,
+        mappingModel
+      }).catch(err => console.warn('[Backboard] Record turn background error:', err.message))
+    }
+
     return {
       success: true,
       reply: synthesized.finalAnswer,
       language: targetLanguage,
       intent,
       consensus: synthesized.consensus,
-      enginesUsed: results.map(r => ({ provider: r.provider, model: r.model, module: r.module }))
+      enginesUsed: results.map(r => ({ provider: r.provider, model: r.model, module: r.module })),
+      memory: {
+        active: this.backboard.isConfigured(),
+        recalledCount: recalledMemories.length,
+        hasContext: Boolean(memoryContext)
+      }
     }
   }
 }

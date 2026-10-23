@@ -2259,6 +2259,7 @@ function KisanAiChatDrawer({ t, language, selectedCrop, onClose, notify }) {
 
     try {
       let resData = null
+      const token = localStorage.getItem('token') || localStorage.getItem('authToken')
 
       if (currentImg || currentPdf) {
         const formData = new FormData()
@@ -2274,15 +2275,22 @@ function KisanAiChatDrawer({ t, language, selectedCrop, onClose, notify }) {
           formData.append('document', currentPdf)
         }
 
+        const formHeaders = {}
+        if (token) formHeaders['Authorization'] = `Bearer ${token}`
+
         const res = await fetch('/api/guru/chat', {
           method: 'POST',
+          headers: formHeaders,
           body: formData
         })
         resData = await res.json()
       } else {
+        const jsonHeaders = { 'Content-Type': 'application/json' }
+        if (token) jsonHeaders['Authorization'] = `Bearer ${token}`
+
         const res = await fetch('/api/guru/chat', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: jsonHeaders,
           body: JSON.stringify({
             message: text,
             language: language || 'English',
@@ -2301,7 +2309,8 @@ function KisanAiChatDrawer({ t, language, selectedCrop, onClose, notify }) {
             text: resData.reply,
             consensus: resData.consensus,
             enginesUsed: resData.enginesUsed,
-            language: resData.language
+            language: resData.language,
+            memory: resData.memory
           }
         ])
       } else {
@@ -2549,6 +2558,11 @@ function KisanAiChatDrawer({ t, language, selectedCrop, onClose, notify }) {
                   <span className="guru-consensus-pill">
                     <ShieldCheck size={11} /> AI Consensus: {m.consensus.confidence || 94}% Confidence
                   </span>
+                  {m.memory?.hasContext && (
+                    <span className="guru-consensus-pill" style={{ background: '#f0fdf4', color: '#166534', border: '1px solid #bbf7d0' }} title="Context recalled from Backboard.io persistent memory">
+                      🧠 Memory Active
+                    </span>
+                  )}
                   <span style={{ fontSize: '9px', color: '#64748b', fontWeight: 600 }}>
                     {m.consensus.modelName || 'Multi-AI Verified'}
                   </span>
