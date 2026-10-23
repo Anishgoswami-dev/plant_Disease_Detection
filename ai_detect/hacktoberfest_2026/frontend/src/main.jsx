@@ -4906,12 +4906,16 @@ function CropDiagnosisScanScreen({ t, crop, onSelectCrop, onBack, notify, onOpen
       try {
         return await fetch(endpoint, { method: 'POST', body: formData, headers: authHeaders })
       } catch (netErr) {
-        // Fallback directly to backend port 4000 if proxy fails or browsing on direct port
-        try {
-          return await fetch(`http://localhost:4000${endpoint}`, { method: 'POST', body: formData, headers: authHeaders })
-        } catch {
-          throw netErr
+        // Fallback to configured VITE_API_URL or local port 4000 in development
+        const fallbackBase = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_API_URL) || (window.location.hostname === 'localhost' ? 'http://localhost:4000' : '')
+        if (fallbackBase) {
+          try {
+            return await fetch(`${fallbackBase}${endpoint}`, { method: 'POST', body: formData, headers: authHeaders })
+          } catch {
+            throw netErr
+          }
         }
+        throw netErr
       }
     }
 

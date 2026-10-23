@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: fasal-dristhi-backend
+    env: node
+    plan: free
+    rootDir: ai_detect/hacktoberfest_2026/backend
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: APP_MODE
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: AI_SERVICE_URL
+        sync: false
+      - key: ELEVENLABS_API_KEY
+        sync: false
+      - key: ELEVENLABS_VOICE_ID
+        value: EXAVITQu4vr4xnSDxMaL
+      - key: ELEVENLABS_MODEL_ID
+        value: eleven_multilingual_v2
+      - key: BACKBOARD_API_KEY
+        sync: false
