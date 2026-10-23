@@ -49,9 +49,9 @@ Follow this step-by-step checklist to perform manual annotation using either **C
 
 ### Phase 2: Uploading Split Batches
 - [ ] **Step 2.1:** Upload images in batches according to their split:
-  - Task 1 (Train): Images from `sih 2026/ml/datasets/yolo_pilot/images/train/` (175 images)
-  - Task 2 (Val): Images from `sih 2026/ml/datasets/yolo_pilot/images/val/` (35 images)
-  - Task 3 (Test): Images from `sih 2026/ml/datasets/yolo_pilot/images/test/` (40 images)
+  - Task 1 (Train): Images from `hacktoberfest_2026/ml/datasets/yolo_pilot/images/train/` (175 images)
+  - Task 2 (Val): Images from `hacktoberfest_2026/ml/datasets/yolo_pilot/images/val/` (35 images)
+  - Task 3 (Test): Images from `hacktoberfest_2026/ml/datasets/yolo_pilot/images/test/` (40 images)
 - [ ] **Step 2.2:** Verify that all images upload without distortion or compression.
 
 ### Phase 3: Human Manual Annotation Protocol
@@ -74,9 +74,9 @@ Follow this step-by-step checklist to perform manual annotation using either **C
 ### Phase 4: Export & Deployment
 - [ ] **Step 4.1:** Export annotations in **YOLO 1.1** (from CVAT) or **YOLOv8 PyTorch TXT** (from Roboflow).
 - [ ] **Step 4.2:** Copy the exported `.txt` files into the matching pilot split folders:
-  - `sih 2026/ml/datasets/yolo_pilot/labels/train/`
-  - `sih 2026/ml/datasets/yolo_pilot/labels/val/`
-  - `sih 2026/ml/datasets/yolo_pilot/labels/test/`
+  - `hacktoberfest_2026/ml/datasets/yolo_pilot/labels/train/`
+  - `hacktoberfest_2026/ml/datasets/yolo_pilot/labels/val/`
+  - `hacktoberfest_2026/ml/datasets/yolo_pilot/labels/test/`
 - [ ] **Step 4.3:** Ensure healthy images have 0-byte `.txt` files in the corresponding labels directory.
 
 ---
@@ -87,19 +87,19 @@ After the human annotator exports the label files, run the automated verificatio
 
 ### Step 1: Check Annotation Completion
 ```bash
-python "d:\ai_detect\sih 2026\ml\scripts\check_annotation_completion.py" \
-  --data-dir "d:\ai_detect\sih 2026\ml\datasets\yolo_pilot" \
+python "d:\ai_detect/hacktoberfest_2026\ml\scripts\check_annotation_completion.py" \
+  --data-dir "d:\ai_detect/hacktoberfest_2026\ml\datasets\yolo_pilot" \
   --classes 4 \
-  --output-csv "d:\ai_detect\sih 2026\ml\datasets\yolo_pilot\completion_audit.csv"
+  --output-csv "d:\ai_detect/hacktoberfest_2026\ml\datasets\yolo_pilot\completion_audit.csv"
 ```
 *Expected completion condition:* `Overall Completion: 100.0%`, `Missing Labels: 0`, `Invalid Labels: 0`.
 
 ### Step 2: Validate YOLO Coordinate Formatting
 ```bash
-python "d:\ai_detect\sih 2026\ml\scripts\validate_yolo_dataset.py" \
-  --data-dir "d:\ai_detect\sih 2026\ml\datasets\yolo_pilot" \
+python "d:\ai_detect/hacktoberfest_2026\ml\scripts\validate_yolo_dataset.py" \
+  --data-dir "d:\ai_detect/hacktoberfest_2026\ml\datasets\yolo_pilot" \
   --classes 4 \
-  --output-json "d:\ai_detect\sih 2026\ml\datasets\yolo_pilot\validation_report.json"
+  --output-json "d:\ai_detect/hacktoberfest_2026\ml\datasets\yolo_pilot\validation_report.json"
 ```
 *Expected validation condition:* `Status: PASS (Valid)`, `Errors Found: 0`.
 

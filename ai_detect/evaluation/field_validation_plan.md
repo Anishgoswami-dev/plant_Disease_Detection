@@ -195,12 +195,12 @@ Report accuracy separately for each image category (A through K) to identify spe
 
 | Component | File | Status |
 |---|---|---|
-| Image validation | [`preprocessing.py`](file:///d:/ai_detect/sih%202026/ml/app/preprocessing.py) | ✅ Production-ready |
+| Image validation | [`preprocessing.py`](file:///d:/ai_detect/hacktoberfest%202026/ml/app/preprocessing.py) | ✅ Production-ready |
 | Blur detection | `preprocessing.py` L57-58 | ✅ Laplacian variance threshold = 35 |
 | Brightness check | `preprocessing.py` L61-63 | ✅ Dark < 30, Overexposed > 235 |
 | Vegetation detection | `preprocessing.py` L66-85 | ✅ HSV green+yellow mask, threshold = 8% |
 | Quality score | `preprocessing.py` L88-97 | ✅ Composite 0–100 score |
-| Confidence triage | [`model.py`](file:///d:/ai_detect/sih%202026/ml/app/model.py) L165-170 | ✅ Three-tier: HIGH (≥0.85) / REVIEW (≥0.60) / LOW |
+| Confidence triage | [`model.py`](file:///d:/ai_detect/hacktoberfest%202026/ml/app/model.py) L165-170 | ✅ Three-tier: HIGH (≥0.85) / REVIEW (≥0.60) / LOW |
 | Reliability badge | `model.py` L170 | ✅ `HIGH_CONFIDENCE`, `REVIEW_RECOMMENDED`, `LOW_UNCERTAIN` |
 | Crop mismatch check | `model.py` L167 | ✅ Compares user-specified crop vs prediction |
 | Top-K predictions | `model.py` L124 | ✅ Returns top-3 with probabilities |

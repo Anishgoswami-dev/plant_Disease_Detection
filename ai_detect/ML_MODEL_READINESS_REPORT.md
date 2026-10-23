@@ -223,7 +223,7 @@ graph TD
    - Success target: $\text{Mean IoU} \ge 0.70$ and $\text{Dice Coefficient} \ge 0.80$.
 
 ### Phase 4: Production Pipeline Integration (3-4 days)
-1. Update [`ml/detection.py`](file:///d:/ai_detect/sih%202026/ml/detection.py) to load `yolov8n_foliar.pt` / `foliar_unet.pth`.
+1. Update [`ml/detection.py`](file:///d:/ai_detect/hacktoberfest%202026/ml/detection.py) to load `yolov8n_foliar.pt` / `foliar_unet.pth`.
 2. Update backend response metadata: set `yolo_integrated: true` and `unet_integrated: true`.
 3. Update frontend overlay toggle to display genuine YOLO confidence scores and U-Net tissue masks.
 

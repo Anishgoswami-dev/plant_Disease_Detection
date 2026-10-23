@@ -10,7 +10,7 @@
 
 ## 1. Pilot Dataset Scope & Structure
 
-The pilot dataset is staged at `sih 2026/ml/datasets/yolo_pilot/` with the following strict split:
+The pilot dataset is staged at `hacktoberfest_2026/ml/datasets/yolo_pilot/` with the following strict split:
 
 ```
 yolo_pilot/
@@ -106,7 +106,7 @@ Each annotated image `<filename>.JPG` must have a corresponding `<filename>.txt`
 3. **Upload:** Drag and drop images preserving existing train/val/test splits.
 4. **Annotate:** Use the bounding box tool (`B` shortcut).
 5. **Export:** Generate YOLOv8 PyTorch format (txt).
-6. **Deploy:** Download and copy label files into `sih 2026/ml/datasets/yolo_pilot/labels/`.
+6. **Deploy:** Download and copy label files into `hacktoberfest_2026/ml/datasets/yolo_pilot/labels/`.
 
 ---
 
@@ -121,7 +121,7 @@ Every annotated image must pass this 8-point checklist before updating `DATASET_
 - [ ] **Tight Boundaries:** Bounding boxes are snug against the lesion halo without excessive background padding.
 - [ ] **Healthy Leaf Verification:** Healthy leaf control files are exactly 0 bytes (no spurious boxes).
 - [ ] **No Cross-Split Leakage:** Images are uniquely partitioned between train, val, and test splits.
-- [ ] **Automated Validation:** `python sih 2026/ml/scripts/validate_yolo_dataset.py --data-dir sih 2026/ml/datasets/yolo_pilot` passes with 0 errors.
+- [ ] **Automated Validation:** `python hacktoberfest_2026/ml/scripts/validate_yolo_dataset.py --data-dir hacktoberfest_2026/ml/datasets/yolo_pilot` passes with 0 errors.
 
 ---
 
@@ -130,10 +130,10 @@ Every annotated image must pass this 8-point checklist before updating `DATASET_
 Run this command after annotating each batch to automatically catch formatting errors:
 
 ```bash
-python "d:\ai_detect\sih 2026\ml\scripts\validate_yolo_dataset.py" \
-  --data-dir "d:\ai_detect\sih 2026\ml\datasets\yolo_pilot" \
+python "d:\ai_detect/hacktoberfest_2026\ml\scripts\validate_yolo_dataset.py" \
+  --data-dir "d:\ai_detect/hacktoberfest_2026\ml\datasets\yolo_pilot" \
   --classes 4 \
-  --output-json "d:\ai_detect\sih 2026\ml\datasets\yolo_pilot\validation_report.json"
+  --output-json "d:\ai_detect/hacktoberfest_2026\ml\datasets\yolo_pilot\validation_report.json"
 ```
 
 Only when `Total Labels == Total Images` and `Errors Found == 0` can the dataset be declared ready for YOLO training.

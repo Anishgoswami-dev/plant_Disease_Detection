@@ -2,9 +2,9 @@ import os
 import sys
 from pathlib import Path
 
-# Redirect to the actual script in sih 2026/ml
+# Redirect to the actual script in hacktoberfest_2026/ml
 CURRENT_DIR = Path(__file__).resolve().parent
-TARGET_SCRIPT = CURRENT_DIR / "sih 2026" / "ml" / "test_inference.py"
+TARGET_SCRIPT = CURRENT_DIR / "hacktoberfest_2026" / "ml" / "test_inference.py"
 
 if not TARGET_SCRIPT.exists():
     # Try direct ml folder if root changed

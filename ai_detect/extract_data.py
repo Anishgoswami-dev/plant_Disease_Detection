@@ -8,8 +8,8 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 TARGET_DIRS = [
-    BASE_DIR / "sih 2026" / "backend" / "data",
-    BASE_DIR / "sih 2026" / "ml" / "data"
+    BASE_DIR / "hacktoberfest_2026" / "backend" / "data",
+    BASE_DIR / "hacktoberfest_2026" / "ml" / "data"
 ]
 for td in TARGET_DIRS:
     td.mkdir(parents=True, exist_ok=True)

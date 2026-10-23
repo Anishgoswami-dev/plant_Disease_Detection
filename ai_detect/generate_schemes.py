@@ -145,8 +145,8 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 target_dirs = [
-    BASE_DIR / "sih 2026" / "backend" / "data",
-    BASE_DIR / "sih 2026" / "ml" / "data"
+    BASE_DIR / "hacktoberfest_2026" / "backend" / "data",
+    BASE_DIR / "hacktoberfest_2026" / "ml" / "data"
 ]
 for td in target_dirs:
     td.mkdir(parents=True, exist_ok=True)

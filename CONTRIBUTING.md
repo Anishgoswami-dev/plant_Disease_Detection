@@ -6,7 +6,7 @@ Thank you for your interest in contributing to **Fasal Dristhi**! This project p
 
 ## 1. Project Architecture & Repository Layout
 
-The repository root is `D:\Plant_Disease_Detection`. The application microservices reside in `ai_detect/sih 2026/`:
+The repository root is `D:\Plant_Disease_Detection`. The application microservices reside in `ai_detect/hacktoberfest_2026/`:
 
 - **`ml/`**: Python / FastAPI Computer Vision Microservice (PyTorch inference, OpenCV foliar lesion localization, agronomic IPM engine).
 - **`backend/`**: Node.js / Express REST API Gateway (JWT authentication, scan routing, offline in-memory store fallback).
@@ -25,9 +25,9 @@ The repository root is `D:\Plant_Disease_Detection`. The application microservic
 Copy the provided `.env.example` templates to `.env` files in each service directory:
 ```powershell
 # In repository root:
-Copy-Item "ai_detect\sih 2026\.env.example" "ai_detect\sih 2026\.env"
-Copy-Item "ai_detect\sih 2026\ml\.env.example" "ai_detect\sih 2026\ml\.env"
-Copy-Item "ai_detect\sih 2026\frontend\.env.example" "ai_detect\sih 2026\frontend\.env"
+Copy-Item "ai_detect/hacktoberfest_2026\.env.example" "ai_detect/hacktoberfest_2026\.env"
+Copy-Item "ai_detect/hacktoberfest_2026\ml\.env.example" "ai_detect/hacktoberfest_2026\ml\.env"
+Copy-Item "ai_detect/hacktoberfest_2026\frontend\.env.example" "ai_detect/hacktoberfest_2026\frontend\.env"
 ```
 
 > **Security Rule:** Never commit active `.env` files, API keys, database credentials, or tokens. The root `.gitignore` enforces exclusion of local `.env` files.
@@ -40,20 +40,20 @@ Open three separate terminals:
 
 ### Terminal 1: ML Microservice (FastAPI, Port 8000)
 ```powershell
-cd "ai_detect\sih 2026\ml"
+cd "ai_detect/hacktoberfest_2026\ml"
 .\venv\Scripts\activate
 python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
 ```
 
 ### Terminal 2: Backend API Gateway (Express, Port 4000)
 ```powershell
-cd "ai_detect\sih 2026\backend"
+cd "ai_detect/hacktoberfest_2026\backend"
 npm start
 ```
 
 ### Terminal 3: Frontend Web Application (Vite, Port 5173)
 ```powershell
-cd "ai_detect\sih 2026\frontend"
+cd "ai_detect/hacktoberfest_2026\frontend"
 npm run dev
 ```
 
@@ -64,7 +64,7 @@ npm run dev
 Before submitting any contribution, run the automated test suites to ensure zero regressions:
 
 ```powershell
-cd "ai_detect\sih 2026\ml"
+cd "ai_detect/hacktoberfest_2026\ml"
 .\venv\Scripts\activate
 
 # 1. AI Feature Improvements & Reliability Test Suite (6 tests)
@@ -76,7 +76,7 @@ python test_step4_model_confidence.py
 
 To validate the frontend build:
 ```powershell
-cd "ai_detect\sih 2026\frontend"
+cd "ai_detect/hacktoberfest_2026\frontend"
 npm run build
 ```
 

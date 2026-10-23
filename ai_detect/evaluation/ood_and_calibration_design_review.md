@@ -418,7 +418,7 @@ For Tier 3 (LOW) and Tier 4 (OOD) inferences, the API generates a standardized r
 
 ### 6.2 Exact Files to Modify & Proposed Diffs
 
-#### 1. ML Configuration — [`ml/app/config.py`](file:///d:/ai_detect/sih%202026/ml/app/config.py)
+#### 1. ML Configuration — [`ml/app/config.py`](file:///d:/ai_detect/hacktoberfest%202026/ml/app/config.py)
 *Purpose:* Expose calibration and OOD threshold constants with zero-code environment variable overrides.
 
 ```python
@@ -434,7 +434,7 @@ MARGIN_AMBIGUITY_THRESHOLD = float(os.getenv("AI_MARGIN_THRESHOLD", "0.10"))
 ENERGY_OOD_THRESHOLD = float(os.getenv("AI_ENERGY_OOD_THRESHOLD", "-15.0"))
 ```
 
-#### 2. ML Response Schema — [`ml/app/schemas.py`](file:///d:/ai_detect/sih%202026/ml/app/schemas.py)
+#### 2. ML Response Schema — [`ml/app/schemas.py`](file:///d:/ai_detect/hacktoberfest%202026/ml/app/schemas.py)
 *Purpose:* Define structured typing for differential candidates, OOD flags, and referral objects without breaking backwards compatibility.
 
 ```python
@@ -463,7 +463,7 @@ class PredictionResponse(BaseModel):
     expert_referral: Optional[ExpertReferralDetails] = None
 ```
 
-#### 3. Core Inference Engine — [`ml/app/model.py`](file:///d:/ai_detect/sih%202026/ml/app/model.py)
+#### 3. Core Inference Engine — [`ml/app/model.py`](file:///d:/ai_detect/hacktoberfest%202026/ml/app/model.py)
 *Purpose:* Apply temperature scaling to logits, calculate entropy/margin/energy, enforce 4-tier triage, and condition treatment generation.
 
 ```python
@@ -504,12 +504,12 @@ with torch.no_grad():
     suppress_treatment = prediction_tier in ("LOW", "OOD_UNKNOWN")
 ```
 
-#### 4. Node.js Backend Gateway — [`backend/index.js`](file:///d:/ai_detect/sih%202026/backend/index.js)
+#### 4. Node.js Backend Gateway — [`backend/index.js`](file:///d:/ai_detect/hacktoberfest%202026/backend/index.js)
 *Purpose:* Pass through new safety attributes (`prediction_tier`, `treatment_suppressed`, `expert_referral`) in `/api/diagnosis` response payload without altering existing field formats.
 
 #### 5. Frontend Presentation Layer
-- [`frontend/src/diagnosis/ConfidenceCard.jsx`](file:///d:/ai_detect/sih%202026/frontend/src/diagnosis/ConfidenceCard.jsx): Add visual alert state for `UNKNOWN_CANNOT_DIAGNOSE` (warning slate styling, differential diagnosis modal).
-- [`frontend/src/diagnosis/CropProtectionSection.jsx`](file:///d:/ai_detect/sih%202026/frontend/src/diagnosis/CropProtectionSection.jsx): If `treatment_suppressed === true`, replace chemical pesticide tables with safe cultural sanitation guidelines and KVK contact card.
+- [`frontend/src/diagnosis/ConfidenceCard.jsx`](file:///d:/ai_detect/hacktoberfest%202026/frontend/src/diagnosis/ConfidenceCard.jsx): Add visual alert state for `UNKNOWN_CANNOT_DIAGNOSE` (warning slate styling, differential diagnosis modal).
+- [`frontend/src/diagnosis/CropProtectionSection.jsx`](file:///d:/ai_detect/hacktoberfest%202026/frontend/src/diagnosis/CropProtectionSection.jsx): If `treatment_suppressed === true`, replace chemical pesticide tables with safe cultural sanitation guidelines and KVK contact card.
 
 ---
 

@@ -212,7 +212,7 @@ Classes where the model frequently predicts correctly but with low confidence (<
 
 ## 9. Current Production Pipeline Gaps
 
-### Existing Safety Mechanisms (in [`model.py`](file:///d:/ai_detect/sih%202026/ml/app/model.py))
+### Existing Safety Mechanisms (in [`model.py`](file:///d:/ai_detect/hacktoberfest%202026/ml/app/model.py))
 
 | Feature | Implementation | Status |
 |---|---|:---:|
@@ -282,7 +282,7 @@ MARGIN_THRESHOLD = 0.15             # NEW: top1-top2 margin below this → flag 
 
 | File | Description |
 |---|---|
-| [confidence_analysis.json](file:///d:/ai_detect/sih%202026/ml/evaluation/confidence_analysis.json) | Full confidence analysis data |
-| [confidence_histogram.png](file:///d:/ai_detect/sih%202026/ml/evaluation/confidence_histogram.png) | Confidence distribution chart |
-| [calibration_curve.png](file:///d:/ai_detect/sih%202026/ml/evaluation/calibration_curve.png) | Calibration curve with ECE |
-| [confidence_analysis.py](file:///d:/ai_detect/sih%202026/ml/scripts/confidence_analysis.py) | Analysis script (reproducible) |
+| [confidence_analysis.json](file:///d:/ai_detect/hacktoberfest%202026/ml/evaluation/confidence_analysis.json) | Full confidence analysis data |
+| [confidence_histogram.png](file:///d:/ai_detect/hacktoberfest%202026/ml/evaluation/confidence_histogram.png) | Confidence distribution chart |
+| [calibration_curve.png](file:///d:/ai_detect/hacktoberfest%202026/ml/evaluation/calibration_curve.png) | Calibration curve with ECE |
+| [confidence_analysis.py](file:///d:/ai_detect/hacktoberfest%202026/ml/scripts/confidence_analysis.py) | Analysis script (reproducible) |

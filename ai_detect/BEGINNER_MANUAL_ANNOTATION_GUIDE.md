@@ -33,7 +33,7 @@ This guide walks you through manually annotating the 250-image Tomato pilot data
   Copy .txt Files to labels/train, labels/val, labels/test
          │
          ▼
-  Run: python sih 2026/ml/scripts/check_annotation_completion.py
+  Run: python hacktoberfest_2026/ml/scripts/check_annotation_completion.py
          │
          ▼
   If 100% Valid & 0 Errors ──> Ready for YOLO Training!
@@ -45,7 +45,7 @@ This guide walks you through manually annotating the 250-image Tomato pilot data
 
 The images are located in your local project folder:
 ```
-D:\ai_detect\sih 2026\ml\datasets\yolo_pilot\images\
+D:\ai_detect/hacktoberfest_2026\ml\datasets\yolo_pilot\images\
 ├── train\   (175 images)
 ├── val\     (35 images)
 └── test\    (40 images)
@@ -164,13 +164,13 @@ Copy the generated `.txt` files into the project's label folders:
 
 ```powershell
 # Copy train labels (.txt files) into:
-D:\ai_detect\sih 2026\ml\datasets\yolo_pilot\labels\train\
+D:\ai_detect/hacktoberfest_2026\ml\datasets\yolo_pilot\labels\train\
 
 # Copy valid/val labels (.txt files) into:
-D:\ai_detect\sih 2026\ml\datasets\yolo_pilot\labels\val\
+D:\ai_detect/hacktoberfest_2026\ml\datasets\yolo_pilot\labels\val\
 
 # Copy test labels (.txt files) into:
-D:\ai_detect\sih 2026\ml\datasets\yolo_pilot\labels\test\
+D:\ai_detect/hacktoberfest_2026\ml\datasets\yolo_pilot\labels\test\
 ```
 
 ### Healthy Images Label Check
@@ -185,12 +185,12 @@ Make sure every healthy image has a corresponding `.txt` file with 0 bytes. For 
 Once all label files are in place, run the verification script in PowerShell:
 
 ```powershell
-python "d:\ai_detect\sih 2026\ml\scripts\check_annotation_completion.py" --data-dir "d:\ai_detect\sih 2026\ml\datasets\yolo_pilot" --output-csv "d:\ai_detect\sih 2026\ml\datasets\yolo_pilot\completion_audit.csv"
+python "d:\ai_detect/hacktoberfest_2026\ml\scripts\check_annotation_completion.py" --data-dir "d:\ai_detect/hacktoberfest_2026\ml\datasets\yolo_pilot" --output-csv "d:\ai_detect/hacktoberfest_2026\ml\datasets\yolo_pilot\completion_audit.csv"
 ```
 
 Also run the coordinate validator:
 ```powershell
-python "d:\ai_detect\sih 2026\ml\scripts\validate_yolo_dataset.py" --data-dir "d:\ai_detect\sih 2026\ml\datasets\yolo_pilot" --classes 4
+python "d:\ai_detect/hacktoberfest_2026\ml\scripts\validate_yolo_dataset.py" --data-dir "d:\ai_detect/hacktoberfest_2026\ml\datasets\yolo_pilot" --classes 4
 ```
 
 ---
@@ -239,5 +239,5 @@ Only when `check_annotation_completion.py` outputs **`VERDICT: [READY]`** can YO
 
 ```bash
 # YOLOv8 Training Command (Run ONLY after passing verification):
-yolo detect train model=yolov8n.pt data="d:/ai_detect/sih 2026/ml/datasets/yolo_pilot/data.yaml" epochs=50 imgsz=640 batch=16
+yolo detect train model=yolov8n.pt data="d:/ai_detect/hacktoberfest_2026/ml/datasets/yolo_pilot/data.yaml" epochs=50 imgsz=640 batch=16
 ```
