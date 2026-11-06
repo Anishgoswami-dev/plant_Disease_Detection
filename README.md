@@ -10,7 +10,6 @@
 [![MongoDB Atlas](https://img.shields.io/badge/Database-MongoDB_Atlas-47A248?logo=mongodb&logoColor=white)](https://www.mongodb.com/atlas)
 [![ElevenLabs](https://img.shields.io/badge/Voice-ElevenLabs_HD-black)](https://elevenlabs.io/)
 [![Backboard.io](https://img.shields.io/badge/Memory-Backboard.io_Persistent_AI-blueviolet)](https://backboard.io/)
-[![Hacktoberfest 2026](https://img.shields.io/badge/Hacktoberfest-2026-FF8800?logo=hacktoberfest&logoColor=white)](https://hacktoberfest.com/)
 
 <br />
 
@@ -34,7 +33,7 @@ D:\Plant_Disease_Detection\
 │   └── assets/
 │       └── fasal_dristhi_app_preview.png # Application UI interface screenshot
 └── ai_detect/
-    └── hacktoberfest_2026/             # Application root (Hacktoberfest Edition)
+    └── hacktoberfest_2026/             # Application root
         ├── .env.example                # Shared environment configuration template
         ├── backend/                    # Node.js / Express REST API gateway
         │   ├── index.js                # Core API, JWT auth, scan processing & fallbacks
